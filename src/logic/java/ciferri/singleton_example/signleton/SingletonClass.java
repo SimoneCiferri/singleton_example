@@ -14,14 +14,35 @@ public class SingletonClass {
     }
 
     public String getMyToken(String caller){
+        String token = "NO_TOKEN";
         if(caller != null){
             if((caller.length() % 2)==0){
-                return "TokenExample" + caller.length();
+                token = generatePersonalToken(caller);
             }else{
-                return "TokenExample2" + caller.length() + "00" + (caller.length() + 10);
+                token = generatePersonalTokenPremium(caller);
             }
-        }else{
-            return "NO_TOKEN";
         }
+        return token;
+    }
+
+    private String generatePersonalToken(String caller){
+        String token = "";
+        if(caller.length() % 2 == 0){
+            token = "FreeToken" + (caller.length() + 122);
+        }else{
+            token = "FreeToken" + 0 + (caller.length() + 123);
+
+        }
+        return token;
+    }
+
+    private String generatePersonalTokenPremium(String caller){
+        String token = "PremiumUserToken";
+        if(caller.length() % 2 == 0){
+            token = token + "_Serial_" + (caller.length() + 777);
+        }else{
+            token = token + "_Serial_"  + 0 + (caller.length() + 777);
+        }
+        return token;
     }
 }
