@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 450, 300);
+        Scene scene = new Scene(fxmlLoader.load(), 750, 400);
         stage.setTitle("Singleton Example!");
         stage.setScene(scene);
         stage.show();

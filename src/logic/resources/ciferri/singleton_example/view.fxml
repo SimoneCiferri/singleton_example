@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" spacing="30.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ciferri.singleton_example.view_controller.ViewController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" spacing="30.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ciferri.singleton_example.view_controller.ViewController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -14,7 +14,22 @@
          <Font size="18.0" />
       </font>
    </Label>
-   <TextField fx:id="tfInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="320.0" promptText="Insert your Name" />
-    <Button onMouseClicked="#generatePersonalToken" text="Generate Token" />
-   <Label fx:id="lblToken" text="____TOKEN____" />
+   <HBox alignment="CENTER" prefHeight="53.0" prefWidth="724.0" spacing="25.0">
+      <children>
+         <TextField fx:id="tfInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="320.0" promptText="Insert Name1" />
+         <TextField fx:id="tfInput2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="320.0" promptText="Insert Name 2" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="250.0">
+      <children>
+          <Button onMouseClicked="#generatePersonalToken" text="Generate Token" />
+         <Button mnemonicParsing="false" onMouseClicked="#generatePersonalToken2" text="Generate Token" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="300.0">
+      <children>
+         <Label fx:id="lblToken" text="____TOKEN1____" />
+         <Label fx:id="lblToken2" text="____TOKEN2____" />
+      </children>
+   </HBox>
 </VBox>
