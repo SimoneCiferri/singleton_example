@@ -2,7 +2,7 @@ package ciferri.singleton_example.signleton;
 
 public class SingletonClass {
 
-    public static SingletonClass instance;
+    private static SingletonClass instance;
 
     private SingletonClass(){}
 
